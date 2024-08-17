@@ -1,7 +1,6 @@
 {
   "name": "@lerna-drone-poc/pack-a",
   "version": "0.0.3",
-  "private": false,
   "description": "> TODO: description",
   "author": "> TODO: author",
   "homepage": "> TODO: readme github url",
