@@ -11,12 +11,11 @@
     "typescript": "^3.3.3333"
   },
   "scripts": {
-    "bootstrap": "lerna bootstrap",
-    "build": "lerna run tsc",
-    "clean-build": "rm -rf node_modules && npm i && lerna clean && npm run bootstrap && npm run build",
+    "setup": "rm -rf node_modules && npm i && lerna clean && npm run lerna:bootstrap && npm run lerna:build",
     "publish": "lerna publish --conventional-commits --cd-version=$LERNA_LEVEL --yes --no-changelog",
-    "test": "jest --verbose --runInBand --detectOpenHandles --forceExit",
-    "test-update-snapshot": "jest -u --runInBand"
+    "lerna:bootstrap": "lerna bootstrap",
+    "lerna:build": "lerna run tsc",
+    "test": "jest --verbose --runInBand --detectOpenHandles --forceExit"
   },
   "dependencies": {
     "@types/node": "^14.14.7"
