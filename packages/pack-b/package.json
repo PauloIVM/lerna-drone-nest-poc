@@ -15,8 +15,5 @@
   "scripts": {
     "tsc": "tsc",
     "test": "echo \"Error: run tests from root\" && exit 1"
-  },
-  "dependencies": {
-    "@lerna-poc/pack-a": "^0.0.4"
   }
 }
