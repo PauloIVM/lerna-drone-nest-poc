@@ -1,0 +1,22 @@
+{
+  "name": "@lerna-drone-poc/pack-b",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "> TODO: author",
+  "homepage": "> TODO: readme github url",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "tsc": "tsc --emitDeclarationOnly",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@lerna-drone-poc/pack-a": "^0.0.1"
+  }
+}

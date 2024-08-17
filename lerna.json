@@ -1,0 +1,11 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "command": {
+    "publish": {
+      "message": "publish npm packages by lerna [ci skip]"
+    }
+  },
+  "version": "independent"
+}
