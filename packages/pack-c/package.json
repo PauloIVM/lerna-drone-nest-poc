@@ -1,6 +1,6 @@
 {
   "name": "@lerna-drone-poc/pack-c",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "description": "> TODO: description",
   "author": "> TODO: author",
@@ -18,6 +18,6 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@lerna-drone-poc/pack-a": "^0.0.2"
+    "@lerna-drone-poc/pack-a": "^0.0.3"
   }
 }
