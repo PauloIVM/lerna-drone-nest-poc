@@ -1,7 +1,7 @@
 {
   "name": "@lerna-drone-nest-poc/pack-a",
   "version": "0.0.9",
-  "private": "false",
+  "private": false,
   "description": "> TODO: description",
   "author": "> TODO: author",
   "homepage": "> TODO: readme github url",

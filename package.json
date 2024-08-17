@@ -2,7 +2,7 @@
   "name": "lerna-drone-nest-poc",
   "private": false,
   "author": "PauloIVM",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "devDependencies": {
     "@types/jest": "^24.0.9",
     "jest": "^24.1.0",
