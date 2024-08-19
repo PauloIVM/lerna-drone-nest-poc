@@ -1,0 +1,20 @@
+{
+    "presets": [
+      "@babel/typescript",
+      [
+        "@babel/preset-env", {
+          "targets": {
+            "browsers": [
+              "IE >= 11"
+            ]
+          },
+          "useBuiltIns": "entry"
+        }
+      ]
+    ],
+    "plugins": [
+      "@babel/proposal-class-properties",
+      "@babel/plugin-transform-runtime",
+      "@babel/plugin-transform-shorthand-properties"
+    ]
+}

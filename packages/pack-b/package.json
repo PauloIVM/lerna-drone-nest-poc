@@ -6,15 +6,18 @@
   "author": "> TODO: author",
   "homepage": "> TODO: readme github url",
   "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "types": "lib/src/index.d.ts",
   "directories": {
     "lib": "lib"
   },
   "files": [
     "lib"
   ],
+  "dependencies": {
+    "lerna-drone-nest-poc-pack-a": "0.0.11"
+  },
   "scripts": {
-    "tsc": "tsc",
+    "tsc": "tsc  --emitDeclarationOnly && npx babel src --out-dir lib --extensions '.ts' --source-maps",
     "test": "echo \"Error: run tests from root\" && exit 1"
   }
 }
