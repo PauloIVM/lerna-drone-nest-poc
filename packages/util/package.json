@@ -1,0 +1,20 @@
+{
+  "name": "lerna-poc-pack-util",
+  "version": "0.1.4",
+  "private": false,
+  "description": "> TODO: description",
+  "author": "> TODO: author",
+  "homepage": "> TODO: readme github url",
+  "main": "lib/index.js",
+  "types": "lib/src/index.d.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "tsc": "tsc --emitDeclarationOnly && npx babel src --out-dir lib --extensions '.ts' --source-maps",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}
