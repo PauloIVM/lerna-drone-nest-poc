@@ -16,5 +16,8 @@
   "scripts": {
     "tsc": "tsc --emitDeclarationOnly && npx babel src --out-dir lib --extensions '.ts' --source-maps",
     "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2"
   }
 }

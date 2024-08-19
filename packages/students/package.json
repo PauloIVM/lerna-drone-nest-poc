@@ -14,7 +14,8 @@
     "lib"
   ],
   "dependencies": {
-    "lerna-poc-pack-auth": "^0.1.4"
+    "lerna-poc-pack-auth": "^0.1.4",
+    "lerna-poc-pack-util": "^0.1.5"
   },
   "scripts": {
     "tsc": "tsc  --emitDeclarationOnly && npx babel src --out-dir lib --extensions '.ts' --source-maps",

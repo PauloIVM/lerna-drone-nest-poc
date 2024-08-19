@@ -1,8 +1,7 @@
 import { version } from "../package.json";
-import auth from "lerna-poc-pack-auth";
+import * as auth from "lerna-poc-pack-auth";
 
 export default function getStudents() {
-    if (!auth()) return;
     console.log("pack-b version: ", version);
     return [
         { id: "1", foo: "bar" },
