@@ -1,6 +1,6 @@
 {
   "name": "lerna-poc-pack-students",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "description": "> TODO: description",
   "author": "> TODO: author",
@@ -14,7 +14,7 @@
     "lib"
   ],
   "dependencies": {
-    "lerna-poc-pack-auth": "^0.1.3"
+    "lerna-poc-pack-auth": "^0.1.4"
   },
   "scripts": {
     "tsc": "tsc  --emitDeclarationOnly && npx babel src --out-dir lib --extensions '.ts' --source-maps",
