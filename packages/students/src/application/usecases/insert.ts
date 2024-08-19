@@ -1,5 +1,6 @@
 import { IStudentsRepository } from "../repositories/i-students-repository";
 import { IAuthGateway } from "../gateways/i-auth-gateway";
+import { Student } from "../../domain/student";
 import someUtil from "lerna-poc-pack-util";
 
 export class InsertUsecase {
