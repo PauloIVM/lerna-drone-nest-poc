@@ -1,6 +1,6 @@
 {
   "name": "lerna-drone-nest-poc-pack-b",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "private": false,
   "description": "> TODO: description",
   "author": "> TODO: author",
@@ -14,7 +14,7 @@
     "lib"
   ],
   "dependencies": {
-    "lerna-drone-nest-poc-pack-a": "0.0.11"
+    "lerna-drone-nest-poc-pack-a": "^0.1.0"
   },
   "scripts": {
     "tsc": "tsc  --emitDeclarationOnly && npx babel src --out-dir lib --extensions '.ts' --source-maps",
