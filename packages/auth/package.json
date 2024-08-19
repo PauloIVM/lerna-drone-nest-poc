@@ -1,5 +1,5 @@
 {
-  "name": "lerna-drone-nest-poc-pack-b",
+  "name": "lerna-poc-pack-auth",
   "version": "0.1.3",
   "private": false,
   "description": "> TODO: description",
@@ -13,11 +13,8 @@
   "files": [
     "lib"
   ],
-  "dependencies": {
-    "lerna-drone-nest-poc-pack-a": "^0.1.3"
-  },
   "scripts": {
-    "tsc": "tsc  --emitDeclarationOnly && npx babel src --out-dir lib --extensions '.ts' --source-maps",
+    "tsc": "tsc --emitDeclarationOnly && npx babel src --out-dir lib --extensions '.ts' --source-maps",
     "test": "echo \"Error: run tests from root\" && exit 1"
   }
 }
