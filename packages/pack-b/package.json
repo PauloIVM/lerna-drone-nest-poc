@@ -1,5 +1,5 @@
 {
-  "name": "@lerna-drone-nest-poc/pack-b",
+  "name": "lerna-drone-nest-poc-pack-b",
   "version": "0.0.7",
   "private": false,
   "description": "> TODO: description",
