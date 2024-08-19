@@ -1,0 +1,85 @@
+global-variables:
+  node: &node
+    image: node:14.17.0
+
+  install: &install
+    <<: *node
+    commands:
+      - npm install
+
+  setup: &setup
+    <<: *node
+    commands:
+      - npm run setup
+
+  test: &test
+    <<: *node
+    commands:
+      - npm test
+
+kind: pipeline
+name: default
+
+steps:
+  - name: pr-install
+    <<: *install
+    when:
+      event:
+        - pull_request
+
+  - name: push-install
+    <<: *install
+    when:
+      branch:
+        - master
+      event:
+        - push
+
+  - name: pr-setup
+    <<: *setup
+    when:
+      event:
+        - pull_request
+
+  - name: push-setup
+    <<: *setup
+    when:
+      branch:
+        - master
+      event:
+        - push
+
+  - name: pr-test
+    <<: *test
+    when:
+      event:
+        - pull_request
+
+  - name: push-test
+    <<: *test
+    when:
+      branch:
+        - master
+      event:
+        - push
+
+  - name: publish
+    <<: *node
+    environment:
+      NPM_TOKEN:
+        from_secret: npm_token
+    commands:
+      - touch ./.npmrc && echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ./.npmrc
+      - git config --global user.email "paulo.vieira.marinho@gmail.com"
+      - git config --global user.name "PauloIVM"
+      - git reset --hard
+      - npm run publish
+    when:
+      branch:
+        - master
+      event:
+        - push
+
+trigger:
+  event:
+    exclude: [ tag ]
