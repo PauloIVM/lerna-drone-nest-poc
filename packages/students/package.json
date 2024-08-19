@@ -1,6 +1,6 @@
 {
   "name": "lerna-poc-pack-students",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "private": false,
   "description": "> TODO: description",
   "author": "> TODO: author",
@@ -14,7 +14,7 @@
     "lib"
   ],
   "dependencies": {
-    "lerna-poc-pack-auth": "^0.1.5",
+    "lerna-poc-pack-auth": "^0.1.6",
     "lerna-poc-pack-util": "^0.1.5"
   },
   "scripts": {
