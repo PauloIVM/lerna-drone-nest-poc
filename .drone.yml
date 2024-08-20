@@ -1,6 +1,6 @@
 global-variables:
   node: &node
-    image: node:14.17.0
+    image: node:18.14.1
 
   install: &install
     <<: *node
