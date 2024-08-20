@@ -87,9 +87,11 @@ steps:
     environment:
       NPM_TOKEN:
         from_secret: npm_token
+      GITHUB_TOKEN:
+        from_secret: github_token
     commands:
       - touch ./.npmrc && echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ./.npmrc
-      - git remote set-url origin "https://PauloIVM:$NPM_TOKEN@github.com/PauloIVM/lerna-drone-nest-poc.git"
+      - git remote set-url origin "https://PauloIVM:$GITHUB_TOKEN@github.com/PauloIVM/lerna-drone-nest-poc.git"
       - git config --global user.email "pakas_vieira_95@hotmail.com"
       - git config --global user.name "PauloIVM"
       - git reset --hard
