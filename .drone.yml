@@ -89,7 +89,7 @@ steps:
         from_secret: npm_token
     commands:
       - touch ./.npmrc && echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ./.npmrc
-      - git config --global user.email "paulo.vieira.marinho@gmail.com"
+      - git config --global user.email "pakas_vieira_95@hotmail.com"
       - git config --global user.name "PauloIVM"
       - git reset --hard
       - npm run publish
