@@ -1,5 +1,5 @@
 import { version } from "../package.json";
 
 export default function someUtil() {
-    console.log("someUtil version: ", version);
+    console.log("some-util version: ", version);
 }

@@ -1,16 +1,21 @@
 global-variables:
   node: &node
-    image: node:14.17.0
+    image: node:18.14.1
 
   install: &install
     <<: *node
     commands:
       - npm install
 
-  setup: &setup
+  bootstrap: &bootstrap
     <<: *node
     commands:
-      - npm run setup
+      - npm run lerna:bootstrap
+
+  build: &build
+    <<: *node
+    commands:
+      - npm run lerna:build
 
   test: &test
     <<: *node
@@ -35,14 +40,28 @@ steps:
       event:
         - push
 
-  - name: pr-setup
-    <<: *setup
+  - name: pr-bootstrap
+    <<: *bootstrap
     when:
       event:
         - pull_request
 
-  - name: push-setup
-    <<: *setup
+  - name: push-bootstrap
+    <<: *bootstrap
+    when:
+      branch:
+        - master
+      event:
+        - push
+
+  - name: pr-build
+    <<: *build
+    when:
+      event:
+        - pull_request
+
+  - name: push-build
+    <<: *build
     when:
       branch:
         - master
